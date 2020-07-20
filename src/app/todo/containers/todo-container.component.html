@@ -1,0 +1,6 @@
+<app-add-todo></app-add-todo>
+<app-todo-list
+  [todos$]="todos$"
+  (complete)="markCompleted($event)"
+  (delete)="deleteTodo($event)"
+></app-todo-list>
