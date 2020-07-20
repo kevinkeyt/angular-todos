@@ -25,4 +25,11 @@ export class TodoContainerComponent implements OnInit {
     todo.completed = !todo.completed;
     this.todoService.saveTodo(todo);
   }
+
+  addTodo(title: string): void {
+    this.todoService.saveTodo({
+      title,
+      completed: false,
+    });
+  }
 }

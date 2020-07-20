@@ -1,9 +1,11 @@
-<form>
+<form (submit)="handleSubmit($event)">
   <input
     class="bg-white focus:outline-none focus:shadow-outline border border-gray-300 rounded-lg py-2 px-4 block w-full appearance-none leading-normal my-5"
     type="text"
     name="title"
-    value=""
+    [value]="inputText"
+    (input)="handleInputChange($event.target.value)"
+    required
     placeholder="Add Todo"
   />
 </form>

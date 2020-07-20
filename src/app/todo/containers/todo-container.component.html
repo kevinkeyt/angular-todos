@@ -1,4 +1,4 @@
-<app-add-todo></app-add-todo>
+<app-add-todo (todoText)="addTodo($event)"></app-add-todo>
 <app-todo-list
   [todos$]="todos$"
   (complete)="markCompleted($event)"
